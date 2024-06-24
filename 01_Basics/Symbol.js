@@ -15,3 +15,21 @@ const sym = Symbol("foo");
 typeof sym; // "symbol"
 const symObj = Object(sym);
 typeof symObj; // "object"
+
+const mySym = Symbol("KEY")
+const user = {
+    name: "Hitesh",
+    "full name": "Hitesh Choudhary",
+    [mySym]: "mykey1",
+    age: 18,
+    location: "Jaipur",
+    email: "hitesh@google.com",
+    isLoggedIn: false,
+    lastLoginDays: ["Monday", "Saturday"]
+}
+
+JsUser.email = "hitesh@chatgpt.com"
+// Object.freeze(JsUser)
+JsUser.email = "hitesh@microsoft.com"
+// console.log(JsUser);
+
