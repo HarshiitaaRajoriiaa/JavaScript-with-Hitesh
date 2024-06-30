@@ -48,26 +48,25 @@ JsUser.greetingTwo();
 *  Singleton objects is an object that is instantiated exactly once. It is a design pattern that ensures a class has only one instance and provides a global point of access to it.
 */
 
-// object literal:
-// let Person1 = {
-//     Name: 'Harshita1',
-//     age: 21,
-//     print: function() {
-//       console.log(`name is ${Person1.Name} and age is ${Person1.age}`);
-//     }
-//   };
-//   let Person2 = {
-//     Name: 'Harshita2',
-//     age: 21,
-//     print: function() {
-//       console.log(`name is ${Person2.Name} and age is ${Person2.age}`);
-//     }
-//   };
-// console.log(Person1)
-// console.log(Person1.print())
-// console.log(Person2)
-// console.log(Person2.print())
+//object literal:
+let Person1 = {
+    Name: 'Harshita1',
+    age: 21,
+    print: function() {
+      console.log(`name is ${Person1.Name} and age is ${Person1.age}`);
+    }
+  };
+  let Person2 = {
+    Name: 'Harshita2',
+    age: 21,
+    print: function() {
+      console.log(`name is ${Person2.Name} and age is ${Person2.age}`);
+    }
+  };
+console.log(Person1)
+console.log(Person1.print())
+console.log(Person2)
+console.log(Person2.print())
 
 
 //singleton object:
-  
