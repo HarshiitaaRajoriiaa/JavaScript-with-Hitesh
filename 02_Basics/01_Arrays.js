@@ -1,17 +1,21 @@
 console.log("hello from array file")
-//Different datatype allowed:
+
+// *Different datatype allowed:
 const arr12 = [1,2,3,4,"harshita"]
 console.log(arr12)
 console.log(arr12.reverse())
-//Can declare it like a object:
+
+// *Can declare it like a object:
 const arr2 = new Array(1,2,3)
 console.log(arr2)
-//Accessing element with index (0 to n-1), where n = no. of elements in array
+
+// *Accessing element with index (0 to n-1), where n = no. of elements in array
 console.log(arr12[2])
 
-// Array methods:
+// *Array methods:
 console.log("About array inbuild methods:")
-arr12.fill(1)
+//const arr12 = [1,2,3,4,"harshita"]
+arr12.fill(1) //every element =1.
 console.log(arr12)
 //add element at the end:
 arr12.push(0)
@@ -22,8 +26,10 @@ console.log(arr12.pop())
 arr12.pop()//delete  last element of array:
 //add element in the beginning:
 arr12.unshift(7 , 10)
+console.log(arr12)
 //delete element from the beginning:
 arr12.shift()
+console.log(arr12)
 //boolean return true or false according to the existence of element:
 console.log(arr12.indexOf(8))
 //new string by concatenating all of the elements in this array,
@@ -31,30 +37,31 @@ console.log(arr12.join())
 console.log(typeof arr12.join())
 const elements = ['Fire', 'Air', 'Water'];
 console.log(elements.join());
-console.log(elements.join(''));
+console.log(elements.join(' '));
 console.log(elements.join('-'));
 
 
 
-//slice vs splice:
+// *Slice vs Splice:
 console.log("About Splice and slice:")
-//Slice: range excluded
+// *Slice: range excluded
 const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
 console.log(animals.slice(2));
-console.log(animals.slice(2, 4));
+console.log(animals.slice(2, 4)); 
 console.log(animals.slice(1, 5));
-console.log(animals.slice(-2));
+console.log(animals.slice(-2));  //-1 to -2
 console.log(animals.slice(2, -1));
-console.log(animals.slice());
-//Splice: range included:
+// *Splice: range included:
+// *Splice: overwrite the array
 const months = ['Jan', 'March', 'April', 'June'];
-months.splice(1, 0, 'Feb');
+months.splice(1, 1,  'Feb'); //at position 1 add feb and remove 0
 console.log(months);
 months.splice(4, 1, 'May'); 
 console.log(months);
+months.splice(2,1);//at position 2 remove 1 element
 
 //#02
-//some more functions:
+// *some more functions:
 console.log("About array methods 02:")
 const marvel_heros = ["thor", "Ironman", "spiderman"]
 const dc_heros = ["superman", "flash", "batman"]
@@ -76,6 +83,8 @@ console.log(Array.from("Hitesh")) //change any data to array
 console.log(Array.from({name: "hitesh"})) // interesting //objectification
 console.log(typeof(Array.from({name: "hitesh"})))
 
+
+// *Bunch of things into array:
 let score1 = 100
 let score2 = 200
 let score3 = 300

@@ -35,7 +35,7 @@ const id = Symbol('123')
 const anotherId = Symbol('123')
 //symbol : for uniquness of two varibles , whether they have same value or not.
 
-//console.log(id === anotherId);//false
+console.log(id === anotherId);//false
 
 const bigNumber = 3456543576654356754n //bigint
 
@@ -57,7 +57,7 @@ const myFunction = function(){
 }
 //function , typeof = function object
 
-//console.table(typeof anotherId  , typeof myFunction , typeof scoreValue , typeof heros , typeof myObj , typeof bigNumber , typeof anotherId , typeof outsideTemp );
+console.table(typeof anotherId  , typeof myFunction , typeof scoreValue , typeof heros , typeof myObj , typeof bigNumber , typeof anotherId , typeof outsideTemp );
 console.log(typeof anotherId ) //symbol
 console.log(typeof myFunction) // object
 console.log(typeof scoreValue ) // Number
