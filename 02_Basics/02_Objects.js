@@ -23,10 +23,9 @@ const JsUser = {
 
 
 JsUser.email = "hitesh@microsoft.com"
-Object.freeze(JsUser) //restrict adding or changing anything in the object after this
+//Object.freeze(JsUser) //restrict adding or changing anything in the object after this
 JsUser.email = "hitesh@chatgpt.com"
-console.log(JsUser);
-// 
+console.log(JsUser); 
 console.log(JsUser);
 
 // * Adding function explicitly:

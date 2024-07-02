@@ -1,6 +1,6 @@
 // * 2 ways:
 const TinderUser = new Object();
-let InstagramUser = {}
+let InstagramUser = { }
 // * addition of objects parameters:
 TinderUser.id = 123456
 TinderUser.Followers = 50000

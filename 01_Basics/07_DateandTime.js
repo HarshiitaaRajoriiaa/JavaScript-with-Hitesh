@@ -1,7 +1,8 @@
 console.log("hello from date and time file")
-//DATE & TIME:
+// *DATE & TIME:
 let mydate = new Date()
-//inbuild
+
+// *inbuild
 console.log(mydate);
 console.log(mydate.toDateString()); //curr date
 console.log(mydate.toLocaleString()); //date + time
@@ -9,13 +10,13 @@ console.log(mydate.toLocaleDateString()); //only date,in diff format
 console.log(mydate.toLocaleTimeString()); //only time
 
 
-//CREATED:
+// *CREATED:
 let myCreatedDate = new Date(5 , 0 , 24) //yy-mm-dd
 let createdate1 = new Date(5 , 0 , 24 , 3 ,6 ,7) //yy-mm-dd , h-m-s , start from 0
 let createdate2 = new Date("2024-8-6") //yy-mm-dd , start from 1
 let myCreatedDate3 = new Date("01-14-2023")
 console.log(myCreatedDate.toString())
-// console.log(createdate.toString());
+console.log(createdate.toString());
 console.log(createdate1.toString());
 console.log(createdate2.toDateString());
 
@@ -29,7 +30,7 @@ console.log((Math.floor(mydate))/1000)
 console.log(`time in seconds from 1 january 1970 to the time date mydate variable declared ${(Math.floor(mydate))/1000}`)
 
 
-//customization over styling of date or time representation:
+// *customization over styling of date or time representation:
 let newDate = new Date()
 newDate.toLocaleString('default' ,{
     weekday:'long',

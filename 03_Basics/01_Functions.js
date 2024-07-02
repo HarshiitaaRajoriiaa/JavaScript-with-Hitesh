@@ -1,14 +1,14 @@
-// function name(){
-//     console.log("Harshita");
-// }
-// name();
-
-
-function addTwoNumbers1(number1, number2){
-
-    console.log(number1 + number2);
+function name(){
+    console.log("Harshita");
 }
-addTwoNumbers( 1,2)
+console.log("harshita")
+
+
+// function addTwoNumbers1(number1, number2){
+
+//     console.log(number1 + number2);
+// }
+// addTwoNumbers( 1,2)
 
 
 // // * Return keyword need console.log() Statement:

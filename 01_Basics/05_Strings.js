@@ -6,7 +6,7 @@ console.log(firstname)
 console.log(lastname)
 //string interpolation:
 console.log(`My  name is ${firstname} and my lastname is ${lastname}`) 
-console.log(lastname.__proto__)
+console.log(lastname.__proto__)//{ }
 
 
 // IN BUILD - FUNCTIONS:
@@ -24,9 +24,9 @@ console.log(test.includes("kaka")) //boolean , presence
 console.log(test.big()) //bigger in display #html
 console.log(test.toLowerCase())
 console.log(test.toUpperCase())
-console.log(test.trim()) // trinLeft() , trinStart() = remove white spaces , sapces from string intial.
-//trinEnd() , trinright() spaces from end 
+console.log(test.trim()) // trimLeft() , trimStart() = remove white spaces , spaces from string initial.
+//trimEnd() , trimright() spaces from end 
 const nstring = test.trim().substring(0 , 12)  // substring from 0 to 11 , 12 excluded
-console.log(test.split(',')) //spliting strng into array by input element.
+console.log(test.split(',')) //splitting string into array by input element.
 console.log(test.replace( ',' ,'@'  )) //replace , by @ / only first ","
 console.log(test.replaceAll( ',' ,'@'  )) //all ", " by "@"
