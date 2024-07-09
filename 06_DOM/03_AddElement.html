@@ -6,7 +6,9 @@
     
 </head>
 <body style ="background-color: #212121; color: azure; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-    
+    <ul class = 'list1'>
+        <li>JavaScript</li>
+    </ul>
 </body>
 <script>
 
@@ -40,6 +42,21 @@
     para.style.padding ='10px'
     para.style.borderRadius='20px'
 
+    //Function for adding elements in html page:
+    function addElements(language) {
+        const list_element = document.createElement('li') //creation of list element.
+        list_element.innerHTML = language
+        document.querySelector('.list1').appendChild(list_element)
+    }
+    //Function for adding elements in html page with some optimization.
+    addElements('Python')
+    function optimizedAddingElements(language) {
+        const list_element = document.createElement('li')
+        const text = document.createTextNode(language)
+        list_element.appendChild(text)
+        document.querySelector('.list1').appendChild(list_element)
+    }
+    optimizedAddingElements('HTML')
 
 </script>
 </html>
