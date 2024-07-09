@@ -2,10 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title id="title" class ='title'>Dom Learning</title>
 </head>
-<body>
-    <p>Lorem ipsum dolor sit amet.</p>
+<body name = 'hitesh' id ='body1' class = 'body' style = "background-color: black; color: yellowgreen; font-family: 'Times New Roman', Times, serif;" >
+    <h1 id = 'h11' class = 'h1' >DOM LEARNING WITH HITESH CHAUDHARY</h1>
+    <h2 class = 'h2'>TODAY 9 JULY 2024 / TUESDAY.</h2>
+    <p class = 'p1'>Lorem ipsum dolor sit amet.</p>
+    <P class="'p2">Lorem ipsum dolor sit amet consectetur.</P>
+    <p class = 'p3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas hic, quaerat rem itaque tenetur eius labore ducimus, ipsum nihil et illum, facilis doloremque dolore harum. Molestiae labore ullam blanditiis facere!</p>
+   <ul class = >
+    <li >one</li>
+    <li >two</li>
+    <li>three</li>
+    <li >four</li>
+    <li>five</li>
+    <li>six</li>
+   </ul>
 </body>
 </html>
+<!--
+*DOM SELECTORS:
+1.  getElementBy...
+    getElementBYName = return NodeList ,
+     getElementBYClassName = return HTML collection,
+     getElementBYTagName = return HTML collection, 
+     getElementBYId = return content of that tag including <tag></tag>
+2. querySelector(' ') = first tag (all content between tags including tags.), querySelectorAll(' ')= return  all the tags in the form of NodeList. [tag =name, class=.class-name, id=#id-name, input= input[type='password'], ]
+3. document = for accessing the specific window /window.document, console.dir(document)
+4. document.getElementBy.....
+    .id
+    .class
+    .textContent = everything including invisible text / display:none.
+    .innerHTML = tags content also
+    .innerText = only the text content.
+    .getAttributes('id')/('className')/('tagName')
+    .setAttributes('class' , "new-value")
+5. querySelector('tagName')/('.className')/('#idName') = return content between tags including tags.
+6. querySelectorAll() = return  all the tags in the form of NodeList
+7. EXAMPLE:
+    document.getElementBYClassName('body')
+    document.querySelector('h1')
+    const all-headings = document.querySelectorAll('h2') = node-list[]
+    all-headings.forEach(function(item){
+        item.style.backgroundColor = 'pink';
+        item.style.padding = '20px';
+        item.style.borderRadius = '20px';
+        item.textContent = "harshita"
+    })
+    -->
