@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Children</title>
+</head>
+<body style ="background-color: #212121; color: azure; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+    <script>
+        const parent = document.querySelector('.parent')
+        console.log(parent)
+        const child1 = document.querySelector('.day')
+        console.log(child1)
+        console.log(parent.children) //return HTML collection of children 
+        console.log(parent.children[2])
+        for (let index = 0; index < parent.children.length; index++) {
+            const element = parent.children[index].innerHTML;
+            console.log(element);
+        }
+        console.log(parent.firstElementChild)
+        console.log(parent.lastElementChild)
+        console.log(child1.parentElement)
+        console.log(child1.nextElementSibling)
+        console.log(parent.childNodes) //Big Tree structure
+        //can do manipulation too:
+        child1.style.backgroundColor = 'green'
+        child1.nextElementSibling.style.backgroundColor = 'purple'
+        child1.style.padding = '20px'
+        child1.style.borderRadius = '10px'
+    </script>
+</html>
