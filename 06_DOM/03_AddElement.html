@@ -48,8 +48,9 @@
         list_element.innerHTML = language
         document.querySelector('.list1').appendChild(list_element)
     }
-    //Function for adding elements in html page with some optimization.
     addElements('Python')
+    
+    //Function for adding elements in html page with some optimization.
     function optimizedAddingElements(language) {
         const list_element = document.createElement('li')
         const text = document.createTextNode(language)
