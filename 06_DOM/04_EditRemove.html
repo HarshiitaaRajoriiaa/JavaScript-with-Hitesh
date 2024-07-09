@@ -3,24 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>edit or remove elements </title>
+    <title> edit or remove elements </title>
 </head>
 <body style = "background-color: #212121; color: whitesmoke; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
     <ul class ='list1'>
         <li>JavaScript</li>
     </ul>
+    <ul class ='list2'>
+        <li>harshita</li>
+    </ul>
 </body>
     <script>
+        //COPIED FROM PREVIOUS CLASS / 03_AddElements:
         function optimizedAddingElements(language) {
-        const list_element = document.createElement('li')
-        const text = document.createTextNode(language)
-        list_element.appendChild(text)
-        document.querySelector('.list1').appendChild(list_element)
-    }
-    optimizedAddingElements('HTML')
-    optimizedAddingElements('Mongo')
-    optimizedAddingElements('CSS')
-    optimizedAddingElements('Java')
-    
+            const list_element = document.createElement('li')
+            // console.log(list_element)
+            const text = document.createTextNode(`${language}`);
+            list_element.appendChild(text)
+            document.querySelector('.list1').appendChild(list_element)
+        }
+        function optimizedAddingElements1(name) {
+            const list_element = document.createElement('li')
+            const text = document.createTextNode(`${name}`)
+            list_element.appendChild(text)
+            document.querySelector('.list2').appendChild(list_element)
+        }
+        optimizedAddingElements('HTML')
+        optimizedAddingElements('Mongo')
+        optimizedAddingElements('CSS')
+        optimizedAddingElements('Java')
+        optimizedAddingElements1('rajoria')
+        optimizedAddingElements1('Dinesh')
+        
+
+
+        // *Remove Element:
+        function removeElement( listclass , index) {
+            const remove = document.querySelector(` .${listclass} li:nth-child(${index})`)
+            if(remove){
+                remove.remove();
+            }
+        }
+        removeElement( 'list2' , 2);
+
+
+
+        // *Edit Element:
+        function editElement(classname , index) {
+            const change = document.querySelector(` .${classname} li:nth-child(${index})`)
+            if(change){
+                change.outerHTML = '<li>new value</li>'
+            }
+        }
+        editElement('list1' , 3)
+        function editElement1(classname , index) {
+            const change = document.querySelector(` .${classname} li:nth-child(${index})`)
+            if(change){
+                const newList = document.createElement('li')
+                newList.textContent = "newValue"
+                change.replaceWith(newList);
+            }
+        }
+        editElement1('list2' , 1)
+
     </script>
 </html>
