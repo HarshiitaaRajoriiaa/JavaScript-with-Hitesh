@@ -38,8 +38,8 @@
 
 
         // *Remove Element:
-        function removeElement( listclass , index) {
-            const remove = document.querySelector(` .${listclass} li:nth-child(${index})`)
+        function removeElement( classname , index) {
+            const remove = document.querySelector(` .${classname} li:nth-child(${index})`)
             if(remove){
                 remove.remove();
             }

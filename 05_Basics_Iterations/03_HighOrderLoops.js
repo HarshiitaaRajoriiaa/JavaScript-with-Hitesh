@@ -7,7 +7,7 @@
 const arr = [1, 2, 3, 4, 5]
 for (const num of arr) {
     console.log(num);
-}
+} //without index:
 
 //String:
 const greetings = "Helloworld!"
@@ -82,7 +82,7 @@ for (const key in map) {
 
 
 
-// *For-Each():
+// *For-Each(): by value
 /*array.forEach(element => {
     
 }); */
@@ -93,7 +93,7 @@ coding.forEach( function (val){
     console.log(val);
 } )
 coding.array.forEach( function(){});
-coding.forEach( (item) => console.log(item);)
+coding.forEach( (item) => console.log(item))
 function printMe(item){
         console.log(item);
   }

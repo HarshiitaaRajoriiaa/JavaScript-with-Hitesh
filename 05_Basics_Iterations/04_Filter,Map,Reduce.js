@@ -1,4 +1,4 @@
-// *Filter:
+// *Filter: direct element
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 myNums.filter( ()=> {})
 const newNums = myNums.filter( (num) => {
@@ -73,12 +73,13 @@ const newNums3 = myNumers
 
 console.log(newNums3);
 
-// *Reduce
+// *Reduce( function () {} )
 const myNums5 = [1, 2, 3]
-const myTotal = myNums5.reduce(function (acc, currval) {
-    console.log(`acc: ${acc} and currval: ${currval}`);
-    return acc + currval
+const myTotal = myNums5.reduce(function (accumulated_value, curr_val) {
+    console.log(`accumulated_value: ${accumulated_value} and current value : ${curr_val}`);
+    return accumulated_value + curr_val
 }, 0)
+console.log(myTotal)
 const arr = myNums5.reduce( (acc , curr) => acc+curr,0 )
 console.log(arr)
 

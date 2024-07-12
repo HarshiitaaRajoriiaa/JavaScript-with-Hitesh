@@ -12,6 +12,7 @@ const map = new Map()
 //.set('key' , 'value') 
 map.set('IN', "India")
 map.set('USA', "United States of America")
+map.set('IN', "India") //override the first value
 map.set('Fr', "France")
 console.log(map);
 fruits.get("USA");

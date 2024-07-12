@@ -14,13 +14,13 @@
     </div>
 </body>
     <script>
-        const parent = document.querySelector('.parent')
+        const parent = document.querySelector('.parent') //class name of div
         console.log(parent)
-        const child1 = document.querySelector('.day')
+        const child1 = document.querySelector('.day') //first list
         console.log(child1)
         console.log(parent.children) //return HTML collection of children 
         console.log(parent.children[2])
-        for (let index = 0; index < parent.children.length; index++) {
+        for (let index = 0; index < parent.children.length; index++) { //HTML collection can be treated as array in some cases.
             const element = parent.children[index].innerHTML;
             console.log(element);
         }
