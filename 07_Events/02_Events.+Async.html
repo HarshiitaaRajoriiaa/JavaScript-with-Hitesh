@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body 
+    style = 
+        "background-color: rgb(14, 12, 49); 
+        /* display: flex;  */
+        justify-content: center;
+        text-align: center;">
+        <h1 id = "heading"
+            style = 
+                "color: white;
+                margin-top : 200px ;">
+                Hey! welcome in this html page
+        </h1>
+        <button id = "button"
+            style = 
+                'color: rgb(35, 16, 16) ; 
+                height: 45px; 
+                width: 400px; 
+                margin-top: 30px; 
+                border-radius: 20px;
+                background-color: blueviolet;' >
+                <strong> CLICK TO CHANGE THE TEXT:</strong> 
+        </button>
+        <button id = "stop"
+            style = 
+                'color: rgb(35, 16, 16) ; 
+                height: 45px; 
+                width: 400px; 
+                margin-top: 30px; 
+                border-radius: 20px;
+                background-color: blueviolet;' >
+                <strong> CLICK TO STOP THE TEXT CHANGING INTO NAME , BECAUSE OF ASSOCIATED ASYNC CODE</strong> 
+        </button>
+</body>
+<script>
+    let button = document.getElementById('button')
+    let name = document.getElementById('heading')
+    let initialText = name.innerHTML;
+    
+    button.addEventListener( 'click' , (e) =>{
+        // alert("button clicked")
+        e.stopPropagation();
+        name.innerHTML = "HARSHITA RAJORIA";
+    })
+    document.body.addEventListener('click', () => {
+    name.innerHTML = initialText;
+    });
+
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "ASYNC CODING"
+    }
+    const changeMe = setTimeout(changeText, 2000)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+
+</script>
+</html>

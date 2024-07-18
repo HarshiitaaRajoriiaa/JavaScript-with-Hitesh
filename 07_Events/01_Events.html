@@ -19,38 +19,46 @@
    </div>
 </body>
 <script>
+
+    // *MOUSE EVENTS/ ALERT MESSAGE:
     document.getElementById('owl').onclick = function(){
         alert("owl clicked")
     }
-    document.getElementById('river').addEventListener('click' , ()=>{
+    document.getElementById('river').addEventListener('click' , (e)=>{
         alert('clicked')
     } , ) 
+    document.getElementById('prayer').addEventListener('mouseover' , ()=>{
+        alert('clicked')
+        console.log("prayer hover")
+    } ,  false) // inner to outer means first child then parent . 
 
-    document.getElementById('images').addEventListener('click', function(e){
+
+    document.getElementById('images').addEventListener('click', (e) =>{
         console.log("clicked inside the ul");
-    }, false) // avoid propagation. == bubbling
+    }, true)  // inner to outer means first child then parent .===false
+              // outer to inner  means first parent then child . 
 
     document.getElementById('owl').addEventListener('click', function(e){
         console.log("owl clicked");
-        e.stopPropagation()
-    }, false)
+        e.stopPropagation() //stop bubbling
+    }, )
     
     document.getElementById('google').addEventListener('click',function(e){
-        e.preventDefault();
-        e.stopPropagation()
+        e.preventDefault(); //restrict the default function
         console.log("google clicked");
     }, false)
 
-    <!-- *TASK IS DELETE PHOTO WHEN CLICKED: -->
-    document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
+    // <!-- *TASK IS DELETE PHOTO WHEN CLICKED: -->
+    document.querySelector('#images').addEventListener('click', function(e){ //selected by id and added an event listener.
+        console.log(e.target.tagName); //tagname == html tag
         if (e.target.tagName === 'IMG') {
             console.log(e.target.id);
             let removeIt = e.target.parentNode
+            console.log(removeIt)
             removeIt.remove()
-        } 
+            }
     })
     
-    //removeIt.parentNode.removeChild(removeIt)
+    
 </script>
 </html>
