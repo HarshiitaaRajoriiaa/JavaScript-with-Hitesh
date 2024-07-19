@@ -27,12 +27,18 @@
                 background-color: blueviolet;' >
                 <strong> CLICK TO CHANGE THE TEXT:</strong> 
         </button>
+        <h1 id = "heading2"
+            style = 
+                "color: white;
+                margin-top : 30px ;">
+                ASYNC CODING
+        </h1>
         <button id = "stop"
             style = 
                 'color: rgb(35, 16, 16) ; 
                 height: 45px; 
                 width: 400px; 
-                margin-top: 30px; 
+                margin-top: 20px; 
                 border-radius: 20px;
                 background-color: blueviolet;' >
                 <strong> CLICK TO STOP THE TEXT CHANGING INTO NAME , BECAUSE OF ASSOCIATED ASYNC CODE</strong> 
@@ -41,6 +47,7 @@
 <script>
     let button = document.getElementById('button')
     let name = document.getElementById('heading')
+    let name2 = document.getElementById('heading2')
     let initialText = name.innerHTML;
     
     button.addEventListener( 'click' , (e) =>{
@@ -53,13 +60,14 @@
     });
 
 
-    const changeText = function(){
-        document.querySelector('h1').innerHTML = "ASYNC CODING"
+    const changeText = ()=>{
+        document.getElementById('heading2').innerHTML = "setTimeOut Function evoked"
     }
-    const changeMe = setTimeout(changeText, 2000)
+    const changeMe = setTimeout(changeText, 1000)
 
     document.querySelector('#stop').addEventListener('click', function(){
         clearTimeout(changeMe)
+        // name2.innerHTML = " oops you click stop button text won't change now";
         console.log("STOPPED")
     })
 

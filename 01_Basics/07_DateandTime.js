@@ -39,3 +39,15 @@ newDate.toLocaleString('default' ,{
 }
 )
 console.log(newDate)
+
+
+
+//how long a certain operation takes:
+let startTime = Date.now();
+
+// Perform some operation
+for (let i = 0; i < 1000000; i++) { /* some operation */ }
+
+let endTime = Date.now();
+let elapsedTime = endTime - startTime;
+console.log(`Elapsed time: ${elapsedTime} milliseconds`);
