@@ -50,19 +50,24 @@
     let name2 = document.getElementById('heading2')
     let initialText = name.innerHTML;
     
+
+    //adding event to button.
     button.addEventListener( 'click' , (e) =>{
         // alert("button clicked")
         e.stopPropagation();
         name.innerHTML = "HARSHITA RAJORIA";
     })
+
+    //adding event to body for reverting back the text of name.
     document.body.addEventListener('click', () => {
     name.innerHTML = initialText;
     });
 
-
+    //function to change text.
     const changeText = ()=>{
         document.getElementById('heading2').innerHTML = "setTimeOut Function evoked"
     }
+
     const changeMe = setTimeout(changeText, 1000)
 
     document.querySelector('#stop').addEventListener('click', function(){
@@ -70,6 +75,5 @@
         // name2.innerHTML = " oops you click stop button text won't change now";
         console.log("STOPPED")
     })
-
 </script>
 </html>

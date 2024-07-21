@@ -1,0 +1,6 @@
+ * API :
+ 1. APi gives you two things one is Protocol and second is information about Data, because it is always about data.
+ 2. Protocol stands for rules decided.
+ 3. API helps in communication between languages , backend , frontend , server to server , browser to client or visa versa , application to application.
+ 4. API REQUEST: is one of the feature in which one request something fro other side and wait for some time and get the message either of failure either of success, requesting data is also possible by API REQUEST. 
+     

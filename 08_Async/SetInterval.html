@@ -43,13 +43,17 @@
     <button id="stop">Stop</button>
 
     <script>
-        let timee = "date";
+
+        let timee;
+        //function to create new object of date and changing text.
         const changeTime = ()=>{
             const date = new Date();
             time = date.toLocaleTimeString();
             document.getElementById('time').innerHTML = time;
         }
         document.getElementById('stop').disabled = true;
+
+
         let stopped;
         const start  = document.getElementById('start').addEventListener('click' , ()=>{
             document.getElementById('stop').disabled = false;
