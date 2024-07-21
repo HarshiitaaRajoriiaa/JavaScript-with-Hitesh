@@ -5,44 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API</title>
     <style>
-        body{
-            background-color: #212121;
+        body {
+            background-color: #987070;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-    </style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 80px;
+        }
+    
+        #hitesh, #harshita {
+          height: 250px;
+          width: 250px;
+          background-color: #F1E5D1;
+          border-radius: 20px;
+          align-items: center;
+          text-align: center;
+          margin-bottom: 80px;
+        }
+    
+        #nameh, #namer {
+          margin-bottom: 5px;
+          margin-top: 5px;
+        }
+    
+        #imagehi, #imageha {
+          background-color: #C39898;
+          height: 210px;
+          width: 230px;
+          margin-left: 10px;
+          border-radius: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+
+        #imagehi img, #imageha img {
+          max-width: 100%;
+          max-height: 100%;
+          border-radius: 20px;
+        }
+        
+        #followers {
+          text-align: center;
+        }
+      </style>
 </head>
 <body>
-    
-</body>
+    <div class="container">  
+        <div id="hitesh">
+            <h3 id="nameh">HITESH CHAHDHARY</h3>
+            <div id="imagehi">
+                <button onclick="loadHiteshProfile()" style="border-radius: 2px; background-color: #987070;">CLICK</button>
+            </div>
+        </div>
+        <div id="followers">
+            <h2>FOLLOWERS:</h2>
+            <ul id="list">
+                <li>Hitesh Chaudhary: <span id="hifollow">00</span></li>
+                <li>Harshita Rajoria: <span id="hafollow">00</span></li>
+            </ul>
+        </div>
+        <div id="harshita">
+            <h3 id="namer">HARSHITA RAJORIA</h3>
+            <div id="imageha">
+                <button onclick="loadHarshitaProfile()" style="border-radius: 2px; background-color: #987070;">CLICK</button>
+            </div>
+        </div>
+    </div>
+
 <script>
-
-
-   /*  open() initializes a newly-created request,
-    * open(method, url)
-    * open(method, url, async)
-   * open(method, url, async, user)
-   * open(method, url, async, user, password)
-   * METHODS = "GET", "POST", "PUT", "DELETE".
-   * Async: An optional Boolean parameter, defaulting to true, 
-            indicating whether or not to perform the operation asynchronously. 
-            If this value is false, the send() method does not return until the response is received. 
-            If true, notification of a completed transaction is provided using event listeners. 
-            This must be true if the multipart attribute is true, or an exception will be thrown.
-    Note: Calling this method for an already active request (one for which open() has already been called) is the equivalent of calling abort().
-   */
-    const Harshita = "https://api.github.com/users/harshiitaarajoriiaa";
-    const Hitesh =  "https://api.github.com/users/hiteshchoudhary";
-    const xml = new XMLHttpRequest(); //created object of XMLHttpRequest for further requests.
-    xml.onreadystatechange = ()=>{
-        console.log(xml.readyState); //current state of request.
+    function loadHiteshProfile() {
+        const Hitesh = 'https://api.github.com/users/hiteshchoudhary';
+        const xhr1 = new XMLHttpRequest();
+        xhr1.onreadystatechange = function() {
+            if (xhr1.readyState === 4 && xhr1.status === 200) {
+                const data1 = JSON.parse(this.responseText);
+                document.getElementById('hifollow').innerText = data1.followers;
+                document.getElementById('imagehi').innerHTML = `<img src="${data1.avatar_url}" alt="Hitesh's Profile Picture">`;
+            }
+        };
+        xhr1.open('GET', Hitesh, true);
+        xhr1.send();
     }
-    xml.open('GET' , Harshita)   //initializes a newly-created request.
-    console.log(xml)  //about XMLHttpRequest.
-    
-    /* 
-    send()
-    send(body)
-    */
-    xml.send();
 
+    function loadHarshitaProfile() {
+        const Harshita = 'https://api.github.com/users/harshiitaarajoriiaa';
+        const xhr2 = new XMLHttpRequest();
+        xhr2.onreadystatechange = function() {
+            if (xhr2.readyState === 4 && xhr2.status === 200) {
+                const data2 = JSON.parse(this.responseText);
+                document.getElementById('hafollow').innerText = data2.followers;
+                document.getElementById('imageha').innerHTML = `<img src="${data2.avatar_url}" alt="Harshita's Profile Picture">`;
+            }
+        };
+        xhr2.open('GET', Harshita, true);
+        xhr2.send();
+    }
 </script>
+</body>
 </html>
