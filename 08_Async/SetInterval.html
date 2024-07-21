@@ -50,16 +50,16 @@
             document.getElementById('time').innerHTML = time;
         }
         document.getElementById('stop').disabled = true;
-        let stoped;
+        let stopped;
         const start  = document.getElementById('start').addEventListener('click' , ()=>{
             document.getElementById('stop').disabled = false;
-            stoped = setInterval(changeTime, 1000);
+            stopped = setInterval(changeTime, 1000);
         })
        
         document.getElementById('stop').addEventListener('click' , ()=>{
             console.log('stop')
-            clearInterval(stoped)
-            document.getElementById('time').innerHTML = 'stoppped';
+            clearInterval(stopped)
+            document.getElementById('time').innerHTML = 'stopped';
         })
 
         
