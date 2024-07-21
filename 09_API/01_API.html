@@ -92,21 +92,21 @@
                 document.getElementById('imagehi').innerHTML = `<img src="${data1.avatar_url}" alt="Hitesh's Profile Picture">`;
             }
         };
-        xhr1.open('GET', Hitesh, true);
+        xhr1.open('GET', Hitesh, true); //true to make code asynchronous. which will keep page responsive when request is in process.
         xhr1.send();
     }
 
     function loadHarshitaProfile() {
         const Harshita = 'https://api.github.com/users/harshiitaarajoriiaa';
         const xhr2 = new XMLHttpRequest();
-        xhr2.onreadystatechange = function() {
-            if (xhr2.readyState === 4 && xhr2.status === 200) {
+        xhr2.onreadystatechange =  function(){
+            if(xhr2.readyState ===4 && xhr2.status ===200){
                 const data2 = JSON.parse(this.responseText);
-                document.getElementById('hafollow').innerText = data2.followers;
-                document.getElementById('imageha').innerHTML = `<img src="${data2.avatar_url}" alt="Harshita's Profile Picture">`;
+                document.getElementById("hafollow").innerText = data2.followers
+                document.getElementById("imageha").innerHTML = `<img src = "${data2.avatar_url}">`;
             }
-        };
-        xhr2.open('GET', Harshita, true); //true to make code asynchronous. which will keep page responsive when request is in process.
+        }
+        xhr2.open('GET'  , Harshita , true);
         xhr2.send();
     }
 </script>
@@ -114,7 +114,6 @@
 </html>
 
 
-/*
-The xhr1.status === 200 and xhr2.status === 200 conditions ensure that the request was successful before updating the DOM elements.
-This prevents any errors in case the request fails or returns an unexpected status code.
-*/
+
+<!-- The xhr1.status === 200 and xhr2.status === 200 conditions ensure that the request was successful before updating the DOM elements.
+This prevents any errors in case the request fails or returns an unexpected status code. -->
