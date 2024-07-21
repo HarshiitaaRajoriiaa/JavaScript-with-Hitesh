@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <style>
+        body{
+            background-color: #212121;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+
+
+   /*  open() initializes a newly-created request,
+    * open(method, url)
+    * open(method, url, async)
+   * open(method, url, async, user)
+   * open(method, url, async, user, password)
+   * METHODS = "GET", "POST", "PUT", "DELETE".
+   * Async: An optional Boolean parameter, defaulting to true, 
+            indicating whether or not to perform the operation asynchronously. 
+            If this value is false, the send() method does not return until the response is received. 
+            If true, notification of a completed transaction is provided using event listeners. 
+            This must be true if the multipart attribute is true, or an exception will be thrown.
+    Note: Calling this method for an already active request (one for which open() has already been called) is the equivalent of calling abort().
+   */
+    const Harshita = "https://api.github.com/users/harshiitaarajoriiaa";
+    const Hitesh =  "https://api.github.com/users/hiteshchoudhary";
+    const xml = new XMLHttpRequest(); //created object of XMLHttpRequest for further requests.
+    xml.onreadystatechange = ()=>{
+        console.log(xml.readyState); //current state of request.
+    }
+    xml.open('GET' , Harshita)   //initializes a newly-created request.
+    console.log(xml)  //about XMLHttpRequest.
+    
+    /* 
+    send()
+    send(body)
+    */
+    xml.send();
+
+</script>
+</html>

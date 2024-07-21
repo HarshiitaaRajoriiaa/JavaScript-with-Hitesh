@@ -3,4 +3,13 @@
  2. Protocol stands for rules decided.
  3. API helps in communication between languages , backend , frontend , server to server , browser to client or visa versa , application to application.
  4. API REQUEST: is one of the feature in which one request something fro other side and wait for some time and get the message either of failure either of success, requesting data is also possible by API REQUEST. 
-     
+ 5. [https://randomuser.me/]  Random API generator. 
+ 6. [https://jsonformatter.org/ ] convert API into json format easy to understand api.
+ 7. [https://api.github.com/users/harshiitaarajoriiaa] my github API.
+ 8. [https://api.github.com/users/hiteshchoudhary] Hitesh github API.
+ 9. The readyState property of XMLHttpRequest indicates the status of an XML request:
+    readyState=0: The request has not been initialized. This is also known as the UNOPENED state.
+    readyState=1: The server connection has been established.
+    readyState=2: The request has been received.
+    readyState=3: The request is being processed.
+    readyState=4: The response is ready after the request has finished. For example, a readyState of 4 means that the program has received a response from the server
