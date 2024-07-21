@@ -106,9 +106,15 @@
                 document.getElementById('imageha').innerHTML = `<img src="${data2.avatar_url}" alt="Harshita's Profile Picture">`;
             }
         };
-        xhr2.open('GET', Harshita, true);
+        xhr2.open('GET', Harshita, true); //true to make code asynchronous. which will keep page responsive when request is in process.
         xhr2.send();
     }
 </script>
 </body>
 </html>
+
+
+/*
+The xhr1.status === 200 and xhr2.status === 200 conditions ensure that the request was successful before updating the DOM elements.
+This prevents any errors in case the request fails or returns an unexpected status code.
+*/
