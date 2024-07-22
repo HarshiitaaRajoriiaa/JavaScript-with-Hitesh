@@ -1,19 +1,19 @@
 // example of object literal
-// const user = {
-//     username: "hitesh",
-//     loginCount: 8,
-//     signedIn: true,
+const user = {
+    username: "hitesh",
+    loginCount: 8,
+    signedIn: true,
 
-//     getUserDetails: function(){
-//         console.log("Got user details from database");
-//         console.log(`Username: ${this.username}`);  //as current context print object.username
-//         console.log(this); //will access current context and print whole object.
-//     }
+    getUserDetails: function(){
+        console.log("Got user details from database");
+        console.log(`Username: ${this.username}`);  //as current context print object.username
+        console.log(this); //will access current context and print whole object.
+    }
 
-// }
-// // console.log(user)
-// console.log(user.getUserDetails())
-// console.log(this); 
+}
+// console.log(user)
+console.log(user.getUserDetails())
+console.log(this); 
 
 //CONSTRUCTOR FUNCTION:
 function userData1( username , email_id , phone_number){
