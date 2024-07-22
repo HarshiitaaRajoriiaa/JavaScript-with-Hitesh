@@ -96,3 +96,18 @@ Array.prototype.heyHitesh = function(){
 heroPower.hitesh()
 myHeros.hitesh()
 myHeros.heyHitesh()
+
+//link two objects 
+const Teacher = {
+    makeVideo: true
+}
+
+const TeachingSupport = {
+    isAvailable: false
+}
+
+const TASupport = {
+    makeAssignment: 'JS assignment',
+    fullTime: true,
+}
+Object.setPrototypeOf(TeachingSupport, Teacher) //Teacher had all properties of TeachingSupport
