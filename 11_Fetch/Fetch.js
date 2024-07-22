@@ -13,3 +13,5 @@ promise.then(
     console.log(error)
 })
 // promise.then().catch()
+
+//micro task queue /fetch queue 
