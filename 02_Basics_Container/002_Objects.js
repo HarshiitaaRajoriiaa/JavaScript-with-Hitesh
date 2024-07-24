@@ -103,5 +103,39 @@ console.log(inst)
 
 
 // advance topic:
+// for making  your own library:
+ const describe = Object.getOwnPropertyDescriptor(Math , "PI")
+ console.log(describe)
+ {
+    value: 3.141592653589793;
+    writable: false;
+    enumerable: false;
+    configurable: false
+  }
+
+InstagramUser = { 
+        id:1234567,
+        Name: { 
+            FirstName: "Harshita",
+            LastName: "Rajoria",
+            id:{
+            idName: "theycallmeharshita",
+            userName: " Harshii"
+            }
+        },
+        Password: "***********"
+    }
 
 
+console.log(InstagramUser)
+console.log(Object.getOwnPropertyDescriptor(InstagramUser , "Password"))
+Object.defineProperty(InstagramUser , "Password" , {
+    writable:false, //won't display
+    enumerable: false, //can't apply loops
+    configurable: true,
+    value: "HarshitaRajoria"
+})
+console.log(Object.getOwnPropertyDescriptor(InstagramUser , "Password"))
+for (const [key , value ] of Object.entries(InstagramUser)) {
+    console.log(`${key} : ${value}`)
+}
