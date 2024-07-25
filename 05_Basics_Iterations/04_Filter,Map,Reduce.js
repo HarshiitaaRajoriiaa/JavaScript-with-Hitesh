@@ -1,6 +1,7 @@
-// *Filter: direct element
+//  TODO Filter: direct element
+
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-myNums.filter( ()=> {})
+//myNums.filter( ()=> {})
 const newNums = myNums.filter( (num) => {
     return num > 4
 } ) //return.
@@ -62,7 +63,7 @@ userBooks = books.filter( (bk) =>  bk.publish >= 1995 && bk.genre === "History")
   console.log(userBooks);
 
 
-// *MAP
+// TODO MAP
 const myNumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 const newNums4 = myNumers.map( (num) =>  num + 10)
 //chaining:
@@ -73,7 +74,7 @@ const newNums3 = myNumers
 
 console.log(newNums3);
 
-// *Reduce( function () {} )
+// TODO Reduce( function () {} )
 const myNums5 = [1, 2, 3]
 const myTotal = myNums5.reduce(function (accumulated_value, curr_val) {
     console.log(`accumulated_value: ${accumulated_value} and current value : ${curr_val}`);
