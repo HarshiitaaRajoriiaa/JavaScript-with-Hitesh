@@ -1,4 +1,8 @@
-//  TODO Filter: direct element
+//  TODO  ABOUT Filter: direct element
+//The filter() method creates a new array filled with elements that pass a test provided by a function.
+//The filter() method does not execute the function for empty elements.
+//The filter() method does not change the original array.
+
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 //myNums.filter( ()=> {})
@@ -63,9 +67,21 @@ userBooks = books.filter( (bk) =>  bk.publish >= 1995 && bk.genre === "History")
   console.log(userBooks);
 
 
-// TODO MAP
-const myNumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const newNums4 = myNumers.map( (num) =>  num + 10)
+// TODO       ABOUT MAP:
+//creates a new array from calling a function for every array element.
+//does not execute the function for empty elements.
+//does not change the original array.
+
+const my_Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const newNums4 = my_Numbers.map( (num) =>  num + 10)
+
+const numbers = [65, 44, 12, 4];
+function myFunction(num) {
+    return num * 10;
+  }
+const newArr = numbers.map(myFunction) //map need reference to the function
+
+
 //chaining:
 const newNums3 = myNumers
                 .map((num) => num * 10 )
@@ -74,7 +90,7 @@ const newNums3 = myNumers
 
 console.log(newNums3);
 
-// TODO Reduce( function () {} )
+// TODO  ABOUT Reduce( function () {} )
 const myNums5 = [1, 2, 3]
 const myTotal = myNums5.reduce(function (accumulated_value, curr_val) {
     console.log(`accumulated_value: ${accumulated_value} and current value : ${curr_val}`);
@@ -102,5 +118,12 @@ const shoppingCart = [
         price: 12999
     },
 ]
+
+
 const price = shoppingCart.reduce((sum , item) => sum + item.price , 0 );
-console.log(price);
+console.log(sum);
+
+
+// ? Difference between map()  and filter()?
+//map() and filter() are both array functions that take user-defined functions as parameters and return updated arrays. 
+//The main difference between the two is that map() transforms each element in an array individually, while filter() removes elements that don't meet a specified condition:
