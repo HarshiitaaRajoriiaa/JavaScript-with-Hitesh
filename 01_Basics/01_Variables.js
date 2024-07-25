@@ -14,7 +14,7 @@ console.table([accountEmail , typeof accountEmail])
 //let accountEmail =  "xyz@google.com" can't redeclare
 accountEmail = "wxy@google.com" //can re assign
 console.log(`after re-assinging the value of accountid ${accountEmail} ,  and type of account email is ${typeof accountEmail}`)
-let accountState; //no need to initialise
+let accountState; //no need to initialize
 console.log(accountState , typeof accountState)
 
 
@@ -36,7 +36,7 @@ console.log(blank2 , typeof blank2)
 console.log("About variables without any prefix")
 name = "Harshita Rajoria"
 roll_no = 123
- // class; can't initialise like this
+ // class; can't initialize like this
 console.log(name , roll_no , typeof name , typeof roll_no)
 
 /*

@@ -16,7 +16,7 @@ typeof sym; // "symbol"
 const symObj = Object(sym);
 typeof symObj; // "object"
 
-const mySym = Symbol("KEY")
+const mySym = Symbol("KEY") //String   mySym = KEY:
 const user = {
     name: "Hitesh",
     "full name": "Hitesh Choudhary",
