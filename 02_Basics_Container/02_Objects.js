@@ -1,13 +1,13 @@
 // console.log("hello from object file")
 //#01
 const myobj = ({
-    name:"Harshita",
-    class:"btech",
-    rollno:"05001172022",
-    subject:"cse-ai"
+    name: "Harshita",
+    class: "btech",
+    rollno: "05001172022",
+    subject: "cse-ai"
 })
 console.log(myobj)
-console.table([myobj.name , myobj.class , myobj.rollno , myobj.subject])
+console.table([myobj.name, myobj.class, myobj.rollno, myobj.subject])
 
 const mySym = Symbol("KEY") //constructor
 const JsUser = {
@@ -25,15 +25,15 @@ const JsUser = {
 JsUser.email = "hitesh@microsoft.com"
 //Object.freeze(JsUser) //restrict adding or changing anything in the object after this
 JsUser.email = "hitesh@chatgpt.com"
-console.log(JsUser); 
+console.log(JsUser);
 console.log(JsUser);
 
 // * Adding function explicitly:
-JsUser.greeting = function() {
+JsUser.greeting = function () {
     console.log("Hello JS user");
 };
 
-JsUser.greetingTwo = function() {
+JsUser.greetingTwo = function () {
     console.log(`Hello JS user, ${this.name}`);
 };
 
@@ -51,17 +51,17 @@ JsUser.greetingTwo();
 let Person1 = {
     Name: 'Harshita1',
     age: 21,
-    print: function() {
-      console.log(`name is ${Person1.Name} and age is ${Person1.age}`);
+    print: function () {
+        console.log(`name is ${Person1.Name} and age is ${Person1.age}`);
     }
-  };
-  let Person2 = {
+};
+let Person2 = {
     Name: 'Harshita2',
     age: 21,
-    print: function() {
-      console.log(`name is ${Person2.Name} and age is ${Person2.age}`);
+    print: function () {
+        console.log(`name is ${Person2.Name} and age is ${Person2.age}`);
     }
-  };
+};
 console.log(Person1)
 console.log(Person1.print())
 console.log(Person2)
@@ -70,14 +70,14 @@ console.log(Person2.print())
 
 
 // * 2 ways:
-const TinderUser = new Object();
-let InstagramUser = { }
+let TinderUser = new Object();
+let InstagramUser = {}
 // * addition of objects parameters:
-const TinderUser = { }
+ TinderUser = {}
 TinderUser.id = 123456
 TinderUser.Followers = 50000
 TinderUser.UserName = "HarshitaRajoria022"
-TinderUser.Activity = [ "Monday" , "Thursday" , "Sunday"]
+TinderUser.Activity = ["Monday", "Thursday", "Sunday"]
 console.log(TinderUser)
 
 
@@ -107,14 +107,14 @@ console.log(TinderUser.hasOwnProperty('isLoggedIn'));
 
 
 // * Nested Objects:
-InstagramUser = ({ 
-    id:1234567,
-    Name: { 
+InstagramUser = ({
+    id: 1234567,
+    Name: {
         FirstName: "Harshita",
         LastName: "Rajoria",
-        id:{
-        idName: "theycallmeharshita",
-        userName: " Harshii"
+        id: {
+            idName: "theycallmeharshita",
+            userName: " Harshii"
         }
     },
     Password: "***********"
@@ -126,24 +126,24 @@ console.log(InstagramUser.Name.id)
 console.log(InstagramUser.Name.id.userName)
 
 // * Concatenating 2 objects:
-const obj1 = {1: "a", 2: "b"}
-const obj2 = {3: "a", 4: "b"}
-const obj4 = {5: "a", 6: "b"}
+const obj1 = { 1: "a", 2: "b" }
+const obj2 = { 3: "a", 4: "b" }
+const obj4 = { 5: "a", 6: "b" }
 const obj3 = { obj1, obj2 }
 console.log(obj3)
-const obj6 = Object.assign( obj1 , obj2 , obj4)
+const obj6 = Object.assign(obj1, obj2, obj4)
 console.log(obj6 == obj1)
 console.log(obj6)
-const obj5 = Object.assign( { } , obj1 , obj2 , obj4)
+const obj5 = Object.assign({}, obj1, obj2, obj4)
 console.log(obj5)
 console.log(obj5 == obj1)
-const obj7 = {...obj1, ...obj2 , ...obj4}
+const obj7 = { ...obj1, ...obj2, ...obj4 }
 console.log(obj7);
 
 
 // * Access with the help of index: Start from 0 to n-1
 const users = [
-   {
+    {
         id: 1,
         email: "h1@gmail.com"
     },
@@ -188,38 +188,38 @@ console.log(Course.courseInstructor)
 
 // advance topic:
 // for making  your own library:
- const describe = Object.getOwnPropertyDescriptor(Math , "PI")
- console.log(describe)
- {
+const describe = Object.getOwnPropertyDescriptor(Math, "PI")
+console.log(describe)
+{
     value: 3.141592653589793;
     writable: false;
     enumerable: false;
     configurable: false
-  }
+}
 
-InstagramUser = { 
-        id:1234567,
-        Name: { 
-            FirstName: "Harshita",
-            LastName: "Rajoria",
-            id:{
+InstagramUser = {
+    id: 1234567,
+    Name: {
+        FirstName: "Harshita",
+        LastName: "Rajoria",
+        id: {
             idName: "theycallmeharshita",
             userName: " Harshii"
-            }
-        },
-        Password: "***********"
-    }
+        }
+    },
+    Password: "***********"
+}
 
 
 console.log(InstagramUser)
-console.log(Object.getOwnPropertyDescriptor(InstagramUser , "Password"))
-Object.defineProperty(InstagramUser , "Password" , {
-    writable:false, //won't display
+console.log(Object.getOwnPropertyDescriptor(InstagramUser, "Password"))
+Object.defineProperty(InstagramUser, "Password", {
+    writable: false, //won't display
     enumerable: false, //can't apply loops
     configurable: true,
     value: "HarshitaRajoria"
 })
-console.log(Object.getOwnPropertyDescriptor(InstagramUser , "Password"))
-for (const [key , value ] of Object.entries(InstagramUser)) {
+console.log(Object.getOwnPropertyDescriptor(InstagramUser, "Password"))
+for (const [key, value] of Object.entries(InstagramUser)) {
     console.log(`${key} : ${value}`)
 }
