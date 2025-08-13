@@ -11,6 +11,10 @@ console.log(arr2)
 // *Accessing element with index (0 to n-1), where n = no. of elements in array
 console.log(arr12[2])
 
+
+
+
+
 // *?Array methods:
 console.log("About array in_build methods:")
 
@@ -87,7 +91,7 @@ marvel_heros.push(dc_heros)
 console.log(marvel_heros) //[ 'thor', 'Ironman', 'spiderman', [ 'superman', 'flash', 'batman' ] ]
 
 
-console.log(marvel_heros); // TODO take dc_heros as another element
+
 const allHeros = marvel_heros.concat(dc_heros) //concat
 const all_new_heros = [...marvel_heros, ...dc_heros , ...arr] //TODO spread
 console.log(allHeros);

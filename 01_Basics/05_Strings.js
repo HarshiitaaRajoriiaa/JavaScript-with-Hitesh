@@ -18,6 +18,8 @@ console.log(test.at(7)) // 0, 1, 2, 3, .............
 console.log(test.at(-9)) // .........-3, -2, -1 
 console.log(lastname.charAt(5))
 console.log(lastname.charCodeAt(5)) //return unicode #ascyll code
+
+
 // *?indexOf()  = return index simply vs search()= can perform more complex practices: 
 console.log(lastname.indexOf('i'))  //return index
 console.log(test.lastIndexOf("different")) //return index of last element if more than one present in string

@@ -12,12 +12,17 @@ x *= 5 // x = 50
 x **= 5 // 10^5
 x /= 5 //x=2
 x %= 5 //x=0
+
+
+//bitwise assignment operators-
 x &= 5 // x = 0
 x |= 5 // x = 15
 x ^= 5 // x = 15
-x &&= 5 // x = 
-x ||= 5 // x =
-x ??= 5 // x =5 
+
+//logical assignment operators
+x &&= 5 //if x is truthy value  changed else unchanged
+x ||= 5 // if x is falsy value  changed else unchanged
+x ??= 5 // x =5 //default value
 
 // console.log(2+2);
 // console.log(2-2);
@@ -37,7 +42,7 @@ let y = "5" + 5
 let z = "Hello" + 5
 
 
-//terenary , condition ? expressionIfTrue : expressionIfFalse;
+//ternary , condition ? expressionIfTrue : expressionIfFalse;
 let x2= 10;
 let result = (x > 5) ? "x is greater than 5" : "x is not greater than 5"; //"x is greater than 5"
 // Should'nt use these types of way: they are confusing and unpredictable.
